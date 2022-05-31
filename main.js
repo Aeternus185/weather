@@ -1,4 +1,4 @@
-document.body.style.backgroundImage = "url(/assets/background01.jpg)";
+document.body.style.backgroundImage = "url(./assets/background01.jpg)";
 
 /* // getting all required elements
 const searchWrapper = document.querySelector(".search-input");
