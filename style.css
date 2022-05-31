@@ -12,7 +12,6 @@
   text-decoration: none;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
-  /*  color: var(--color-text); */
 }
 
 body {
@@ -35,7 +34,7 @@ body {
 /* SEARCH INPUT */
 
 ::selection {
-  color: #fff;
+  color: var(--color-text);
   background: #bfbfbf;
 }
 
@@ -45,7 +44,8 @@ body {
 }
 
 .wrapper .search-input {
-  background: #fff;
+  color: var(--color-text-2);
+  background: var(--color-text);
   width: 100%;
   border-radius: 10px;
   position: relative;
@@ -128,4 +128,118 @@ body {
 
 .search-input.active .fa-magnifying-glass {
   display: block;
+}
+
+/* SETTINGS */
+
+.fa-gear {
+  height: 37.7px;
+  color: #fff;
+  line-height: 40px;
+  font-size: 30px;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.fa-gear:hover {
+  animation: Spin 3s linear 0s infinite;
+  -moz-animation: Spin 3s linear 0s infinite;
+}
+
+@keyframes Spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes Spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.settings {
+  color: var(--color-text-2);
+  font-size: 20px;
+}
+
+div .settings {
+  background-color: #fff;
+  border-radius: 10px;
+  height: 163.98px;
+  width: 260px;
+  padding: 10px 10px 0 10px;
+  position: relative;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 80px;
+  right: 25px;
+}
+
+div .settings:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 7px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 12px solid #fff;
+}
+
+div .settings .settings-item {
+  margin-bottom: 10px;
+  height: 28px;
+  line-height: 25px;
+}
+
+/* SETTINGS - RADIO BUTTONS */
+
+.radio-buttons {
+  display: inline-block;
+  float: right;
+}
+
+.radio {
+  display: inline-flex;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.radio-input {
+  display: none;
+}
+
+.radio-label {
+  border: 1.5px solid #e6e6e6;
+  padding: 0px 4px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  background: #e6e6e6;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.radio-label:not(:last-of-type) {
+  border-right: 1px #e6e6e6;
+}
+
+.radio-input:checked + .radio-label {
+  background: transparent;
+}
+
+.radio-input:checked + .radio-label:not(:last-of-type) {
+  border-radius: 5px 0 0 5px;
+}
+
+.radio-input:checked + .radio-label:not(:first-of-type) {
+  border-radius: 0 5px 5px 0;
 }
