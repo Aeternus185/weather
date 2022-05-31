@@ -1,0 +1,125 @@
+:root {
+  --color-primary: #fff;
+  --color-text: #fff;
+  --color-text-2: #000;
+}
+
+/* GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  /*  color: var(--color-text); */
+}
+
+body {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blur {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  height: 100vh;
+}
+
+/* SEARCH INPUT */
+
+::selection {
+  color: #fff;
+  background: #bfbfbf;
+}
+
+.wrapper {
+  max-width: 500px;
+  margin: 25px auto;
+}
+
+.wrapper .search-input {
+  background: #fff;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.wrapper .search-input input:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.search-input input {
+  height: 40px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 0 50px 0 42.5px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-input.active input {
+  border-radius: 5px 5px 0 0;
+}
+
+.search-input .autocom-box {
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.search-input.active .autocom-box {
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li {
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+.search-input.active .autocom-box li {
+  display: block;
+}
+
+.autocom-box li:hover {
+  background: #efefef;
+}
+
+/* .search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #644bff;
+  cursor: pointer;
+} */
+
+.fa-location-dot {
+  height: 30px;
+  width: 22.5px;
+  color: #ff4a4a;
+  position: absolute;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+}
