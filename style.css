@@ -51,8 +51,12 @@ body {
   position: relative;
 }
 
-.wrapper .search-input input:focus {
+.search-input input:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.search-input.active input {
+  box-shadow: none;
 }
 
 .search-input input {
@@ -61,13 +65,8 @@ body {
   outline: none;
   border: none;
   border-radius: 10px;
-  padding: 0 50px 0 42.5px;
-  font-size: 18px;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-.search-input.active input {
-  border-radius: 5px 5px 0 0;
+  padding: 0 50px 0 40px;
+  font-size: 20px;
 }
 
 .search-input .autocom-box {
@@ -76,21 +75,22 @@ body {
   pointer-events: none;
   max-height: 280px;
   overflow-y: auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 10px 10px;
+  border-top: #bfbfbf solid 1px;
 }
 
 .search-input.active .autocom-box {
-  padding: 10px 8px;
   opacity: 1;
   pointer-events: auto;
 }
 
 .autocom-box li {
   list-style: none;
-  padding: 8px 12px;
+  padding: 8px 50px 8px 40px;
   display: none;
   width: 100%;
-  cursor: default;
-  border-radius: 3px;
+  cursor: pointer;
 }
 
 .search-input.active .autocom-box li {
@@ -101,25 +101,31 @@ body {
   background: #efefef;
 }
 
-/* .search-input .icon{
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  height: 55px;
-  width: 55px;
-  text-align: center;
-  line-height: 55px;
-  font-size: 20px;
-  color: #644bff;
-  cursor: pointer;
-} */
-
 .fa-location-dot {
   height: 30px;
   width: 22.5px;
   color: #ff4a4a;
   position: absolute;
   text-align: center;
-  line-height: 55px;
-  font-size: 20px;
+  line-height: 40px;
+  font-size: 30px;
+  padding: 0px 10px;
+}
+
+.fa-magnifying-glass {
+  height: 30px;
+  width: 30px;
+  color: #bfbfbf;
+  right: 20px;
+  position: absolute;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+  padding: 0px 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.search-input.active .fa-magnifying-glass {
+  display: block;
 }
