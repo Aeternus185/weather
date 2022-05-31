@@ -31,13 +31,73 @@
   <!--- BODY -->
   <body>
     <!--     <div class="blur"></div> -->
-    <!--- SEARCH INPUT -->
     <div class="wrapper">
+      <!--- SEARCH INPUT -->
+
       <div class="search-input">
         <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
         <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
         <input type="text" placeholder="Type to search..." />
         <div class="autocom-box"></div>
+      </div>
+
+      <!--- SETTINGS -->
+      <div class="icon"><i class="fa-solid fa-gear"></i></div>
+      <div class="settings">
+        <div class="settings-item">
+          <span>Temperature Unit</span>
+          <div class="radio-buttons">
+            <div class="radio">
+              <input
+                class="radio-input"
+                type="radio"
+                name="Unit"
+                id="UnitC"
+                value="C"
+                checked
+              />
+              <label class="radio-label" for="UnitC">C°</label>
+              <input
+                class="radio-input"
+                type="radio"
+                name="Unit"
+                id="UnitF"
+                value="F"
+              />
+              <label class="radio-label" for="UnitF">F°</label>
+            </div>
+          </div>
+        </div>
+        <div class="settings-item">
+          <span>Time Format</span>
+          <div class="radio-buttons">
+            <div class="radio">
+              <input
+                class="radio-input"
+                type="radio"
+                name="Format"
+                id="12H"
+                value="12H"
+                checked
+              />
+              <label class="radio-label" for="12H">12H</label>
+              <input
+                class="radio-input"
+                type="radio"
+                name="Format"
+                id="24H"
+                value="24H"
+              />
+              <label class="radio-label" for="24H">24H</label>
+            </div>
+          </div>
+        </div>
+        <div class="settings-item">
+          <span>Theme</span>
+        </div>
+        <div class="settings-item">
+          <span>Sound</span>
+        </div>
       </div>
     </div>
     <!--- JS -->
