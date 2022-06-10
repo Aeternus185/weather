@@ -243,7 +243,7 @@ div .settings .settings-item {
   font-size: 128px;
 }
 
-hr.weather {
+hr.weather-info-line {
   width: 600px;
   border: none;
   height: 1px;
@@ -263,4 +263,25 @@ hr.weather {
   position: absolute;
   top: 140px;
   right: 60px;
+}
+
+/* WEATHER TODAY */
+.weather-today {
+  color: #fff;
+  text-align: center;
+}
+
+.weather-today .title {
+  font-size: 48px;
+}
+
+hr.weather-today-line {
+  width: 600px;
+  border: none;
+  height: 1px;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }

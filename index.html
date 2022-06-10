@@ -32,7 +32,6 @@
   <body>
     <div class="wrapper">
       <!--- SEARCH INPUT -->
-
       <div class="search-input">
         <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
         <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
@@ -101,13 +100,12 @@
     </div>
 
     <!--- WEATHER INFO -->
-
     <div class="weather-info">
       <div class="temp">
         <span class="temp-number">22°</span>
         <span class="temp-text">Clear</span>
       </div>
-      <hr class="weather" />
+      <hr class="weather-info-line" />
       <div class="feelslike">
         <span class="feelslike-text">Feels Like</span>
         <span class="feelslike-number">24.6°</span>
@@ -115,10 +113,18 @@
     </div>
 
     <!--- DATE INFO -->
-
     <div class="date-info">
       <span class="date">Today, May 30</span>
       <span class="hour">01:14 AM</span>
+    </div>
+
+    <!--- WEATHER TODAY -->
+    <div class="weather-today">
+      <div class="title">
+        <span>Weather Today</span>
+      </div>
+      <hr class="weather-today-line" />
+      <div class="days"></div>
     </div>
     <!--- JS -->
     <script src="main.js"></script>
