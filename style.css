@@ -254,3 +254,13 @@ hr.weather {
 .feelslike {
   font-size: 64px;
 }
+
+/* DATE INFO */
+.date-info {
+  color: #fff;
+  font-size: 48px;
+  display: inline-block;
+  position: absolute;
+  top: 140px;
+  right: 60px;
+}
