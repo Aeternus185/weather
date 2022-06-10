@@ -231,6 +231,7 @@ div .settings .settings-item {
 
 .radio-input:checked + .radio-label:not(:first-of-type) {
   border-radius: 0 5px 5px 0;
+<<<<<<< HEAD
 }
 
 /* WEATHER INFO */
@@ -253,4 +254,6 @@ hr.weather {
 
 .feelslike {
   font-size: 64px;
+=======
+>>>>>>> c08a37ccc4569761347b4e767738d88357a98361
 }
