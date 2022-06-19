@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!--- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--- CUSTOM CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <!--- BODY -->
+  <body>
+    <div class="wrapper">
+      <!--- SEARCH INPUT -->
+      <div class="search-input">
+        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <input type="text" placeholder="Type to search..." />
+        <div class="autocom-box"></div>
+      </div>
+
+      <!--- SETTINGS -->
+      <div class="icon"><i class="fa-solid fa-gear"></i></div>
+      <div class="settings">
+        <div class="settings-item">
+          <span>Temperature Unit</span>
+          <div class="radio-buttons">
+            <div class="radio">
+              <input
+                class="radio-input"
+                type="radio"
+                name="Unit"
+                id="UnitC"
+                value="C"
+                checked
+              />
+              <label class="radio-label" for="UnitC">C°</label>
+              <input
+                class="radio-input"
+                type="radio"
+                name="Unit"
+                id="UnitF"
+                value="F"
+              />
+              <label class="radio-label" for="UnitF">F°</label>
+            </div>
+          </div>
+        </div>
+        <div class="settings-item">
+          <span>Time Format</span>
+          <div class="radio-buttons">
+            <div class="radio">
+              <input
+                class="radio-input"
+                type="radio"
+                name="Format"
+                id="12H"
+                value="12H"
+                checked
+              />
+              <label class="radio-label" for="12H">12H</label>
+              <input
+                class="radio-input"
+                type="radio"
+                name="Format"
+                id="24H"
+                value="24H"
+              />
+              <label class="radio-label" for="24H">24H</label>
+            </div>
+          </div>
+        </div>
+        <div class="settings-item">
+          <span>Theme</span>
+        </div>
+        <div class="settings-item">
+          <span>Sound</span>
+        </div>
+      </div>
+    </div>
+
+    <!--- WEATHER INFO -->
+    <div class="weather-info">
+      <div class="temp">
+        <span class="temp-number">22°</span>
+        <span class="temp-text">Clear</span>
+      </div>
+      <hr class="weather-info-line" />
+      <div class="feelslike">
+        <span class="feelslike-text">Feels Like</span>
+        <span class="feelslike-number">24.6°</span>
+      </div>
+    </div>
+
+    <!--- DATE INFO -->
+    <div class="date-info">
+      <span class="date">Today, May 30</span>
+      <span class="hour">01:14 AM</span>
+    </div>
+
+    <!--- WEATHER TODAY -->
+    <div class="weather-today">
+      <div class="title">
+        <span>Weather Today</span>
+      </div>
+      <hr class="weather-today-line" />
+      <div class="hours">
+        <i class="fa-solid fa-angle-left arrow"></i>
+        <div class="hour">
+          <div class="time">12 AM</div>
+          <div class="icon">
+            <img src="./assets/weather/64x64/day/143.png" />
+          </div>
+          <div class="temp">16.3°</div>
+        </div>
+        <div class="separator"></div>
+        <div class="hour">
+          <div class="time">12 AM</div>
+          <div class="icon">
+            <img src="./assets/weather/64x64/day/143.png" />
+          </div>
+          <div class="temp">16.3°</div>
+        </div>
+        <div class="separator"></div>
+        <div class="hour">
+          <div class="time">12 AM</div>
+          <div class="icon">
+            <img src="./assets/weather/64x64/day/143.png" />
+          </div>
+          <div class="temp">16.3°</div>
+        </div>
+        <div class="separator"></div>
+        <div class="hour">
+          <div class="time">12 AM</div>
+          <div class="icon">
+            <img src="./assets/weather/64x64/day/143.png" />
+          </div>
+          <div class="temp">16.3°</div>
+        </div>
+        <div class="separator"></div>
+        <div class="hour">
+          <div class="time">12 AM</div>
+          <div class="icon">
+            <img src="./assets/weather/64x64/day/143.png" />
+          </div>
+          <div class="temp">16.3°</div>
+        </div>
+        <div class="separator"></div>
+        <div class="hour">
+          <div class="time">12 AM</div>
+          <div class="icon">
+            <img src="./assets/weather/64x64/day/143.png" />
+          </div>
+          <div class="temp">16.3°</div>
+        </div>
+        <div class="separator"></div>
+        <div class="hour">
+          <div class="time">12 AM</div>
+          <div class="icon">
+            <img src="./assets/weather/64x64/day/143.png" />
+          </div>
+          <div class="temp">16.3°</div>
+        </div>
+        <div class="separator"></div>
+        <div class="hour">
+          <div class="time">12 AM</div>
+          <div class="icon">
+            <img src="./assets/weather/64x64/day/143.png" />
+          </div>
+          <div class="temp">16.3°</div>
+        </div>
+        <div class="separator"></div>
+        <div class="hour">
+          <div class="time">12 AM</div>
+          <div class="icon">
+            <img src="./assets/weather/64x64/day/143.png" />
+          </div>
+          <div class="temp">16.3°</div>
+        </div>
+        <div class="separator"></div>
+        <div class="hour">
+          <div class="time">12 AM</div>
+          <div class="icon">
+            <img src="./assets/weather/64x64/day/143.png" />
+          </div>
+          <div class="temp">16.3°</div>
+        </div>
+        <div class="separator"></div>
+        <div class="hour">
+          <div class="time">12 AM</div>
+          <div class="icon">
+            <img src="./assets/weather/64x64/day/143.png" />
+          </div>
+          <div class="temp">16.3°</div>
+        </div>
+        <div class="separator"></div>
+        <div class="hour">
+          <div class="time">12 AM</div>
+          <div class="icon">
+            <img src="./assets/weather/64x64/day/143.png" />
+          </div>
+          <div class="temp">16.3°</div>
+        </div>
+        <i class="fa-solid fa-angle-right arrow"></i>
+      </div>
+    </div>
+    <!--- JS -->
+    <script src="main.js"></script>
+    <script src="suggestions.js"></script>
+  </body>
+</html>

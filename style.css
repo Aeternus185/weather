@@ -1,0 +1,320 @@
+:root {
+  --color-primary: #fff;
+  --color-text: #fff;
+  --color-text-2: #000;
+}
+
+/* GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* SEARCH INPUT */
+
+::selection {
+  color: var(--color-text);
+  background: #bfbfbf;
+}
+
+.wrapper {
+  max-width: 500px;
+  margin: 25px auto;
+}
+
+.wrapper .search-input {
+  color: var(--color-text-2);
+  background: var(--color-text);
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.search-input input:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.search-input.active input {
+  box-shadow: none;
+}
+
+.search-input input {
+  height: 40px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 0 50px 0 40px;
+  font-size: 20px;
+}
+
+.search-input .autocom-box {
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 10px 10px;
+  border-top: #bfbfbf solid 1px;
+}
+
+.search-input.active .autocom-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li {
+  list-style: none;
+  padding: 8px 50px 8px 40px;
+  display: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.search-input.active .autocom-box li {
+  display: block;
+}
+
+.autocom-box li:hover {
+  background: #efefef;
+}
+
+.fa-location-dot {
+  color: #ff4a4a;
+  position: absolute;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+  padding: 0px 10px;
+}
+
+.fa-magnifying-glass {
+  height: 30px;
+  width: 30px;
+  color: #bfbfbf;
+  right: 20px;
+  position: absolute;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+  padding: 0px 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.search-input.active .fa-magnifying-glass {
+  display: block;
+}
+
+/* SETTINGS */
+
+.fa-gear {
+  color: #fff;
+  line-height: 40px;
+  font-size: 30px;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.fa-gear:hover {
+  animation: Spin 3s linear 0s infinite;
+  -moz-animation: Spin 3s linear 0s infinite;
+}
+
+@keyframes Spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes Spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.settings {
+  color: var(--color-text-2);
+  font-size: 20px;
+  display: none; /* Hide until gear is clicked */
+}
+
+div .settings {
+  background-color: #fff;
+  border-radius: 10px;
+  height: 163.98px;
+  width: 260px;
+  padding: 10px 10px 0 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 80px;
+  right: 25px;
+}
+
+div .settings:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 7px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 12px solid #fff;
+}
+
+div .settings .settings-item {
+  margin-bottom: 10px;
+  height: 28px;
+  line-height: 25px;
+}
+
+/* SETTINGS - RADIO BUTTONS */
+
+.radio-buttons {
+  display: inline-block;
+  float: right;
+}
+
+.radio {
+  display: inline-flex;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.radio-input {
+  display: none;
+}
+
+.radio-label {
+  border: 1.5px solid #e6e6e6;
+  padding: 0px 4px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  background: #e6e6e6;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.radio-label:not(:last-of-type) {
+  border-right: 1px #e6e6e6;
+}
+
+.radio-input:checked + .radio-label {
+  background: transparent;
+}
+
+.radio-input:checked + .radio-label:not(:last-of-type) {
+  border-radius: 5px 0 0 5px;
+}
+
+.radio-input:checked + .radio-label:not(:first-of-type) {
+  border-radius: 0 5px 5px 0;
+}
+
+/* WEATHER INFO */
+.weather-info {
+  color: #fff;
+  margin-left: 60px;
+}
+
+.weather-info .temp {
+  font-size: 128px;
+}
+
+hr.weather-info-line {
+  width: 600px;
+  border: none;
+  height: 1px;
+  background: #fff;
+  margin: 10px 0 20px 0;
+}
+
+.feelslike {
+  font-size: 64px;
+}
+
+/* DATE INFO */
+.date-info {
+  color: #fff;
+  font-size: 48px;
+  display: inline-block;
+  position: absolute;
+  top: 140px;
+  right: 60px;
+}
+
+/* WEATHER TODAY */
+.weather-today {
+  color: #fff;
+  text-align: center;
+}
+
+.weather-today .title {
+  font-size: 48px;
+}
+
+hr.weather-today-line {
+  width: 600px;
+  border: none;
+  height: 1px;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.weather-today .hours .arrow {
+  color: #fff;
+  line-height: 40px;
+  font-size: 37px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-today .hours {
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-today .hours .hour {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.weather-today .hours .hour .time {
+  margin-bottom: -8px;
+}
+
+.weather-today .hours .hour .temp {
+  margin-top: -14px;
+}
+
+.weather-today .hours .separator {
+  border-left: 1px solid #fff;
+  height: 100px;
+  margin: auto 0;
+  align-items: center;
+}
