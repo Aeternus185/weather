@@ -18,6 +18,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 /* SEARCH INPUT */
@@ -266,6 +267,7 @@ hr.weather-info-line {
 .weather-today {
   color: #fff;
   text-align: center;
+  margin-top: 150px;
 }
 
 .weather-today .title {
@@ -286,7 +288,7 @@ hr.weather-today-line {
 .weather-today .hours .arrow {
   color: #fff;
   line-height: 40px;
-  font-size: 37px;
+  font-size: 70px;
   cursor: pointer;
   display: flex;
   justify-content: center;
